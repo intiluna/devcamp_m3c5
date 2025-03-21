@@ -327,3 +327,15 @@ Referencias
 
 
 ## 6.  ¿Qué es un paquete pip?
+
+PIP ("Pip Installs Packages") es un gestor de paquetes de python que permite instalar paquetes externos que no son parte de la libreria estandar. En ese sentido, un paquete pip se refiere a un paquete externo que puede agregar funcionalidades a python.
+
+Por ejemplo, si requerimos realizar análisis y calculos númericos de manera eficiente, es comun instalar paquetes como numpy y para ello en terminal ejecutariamos:
+
+      pip install numpy
+Si queremos explorar alguno de los miles de paquetes disponibles, podemos explorar en <https://pypi.org>. 
+
+Por ejemplo, si buscamos numpy obtenemos un resultado como lo que se muestra en la siguiente figura:
+
+![Vista de resultado de paquete numpy en pypi](images/pip_packages.png)
+
