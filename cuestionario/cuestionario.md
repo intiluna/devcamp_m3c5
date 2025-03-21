@@ -219,6 +219,94 @@ Referencias:
 
 ## ¿Qué es un argumento en Python?
 
+Las funciones pueden tener datos o valores que les son suministrados
+llamados argumentos, se colocan dentro del parentesis y la función los
+utiliza de alguna manera.
+
+Tipos de argumento:
+
+- **Argumentos posicionales** son aquellos que se pasan en el mismo
+  orden en que la función fueron definidos.
+
+``` python
+def saludar(nombre, pueblo):
+    print(f"Hola {nombre} de {pueblo}")
+
+
+saludar("Ana", "Gernika")
+```
+
+    Hola Ana de Gernika
+
+- **Argumentos con nombre (keywords)** tienen la ventaja que no importa
+  el orden porque se pasa el valor con el nombre del argumento.
+
+``` python
+def saludar(nombre, pueblo, hobby):
+    print(f"Hola {nombre} de {pueblo}. Entiendo que tu hobby es {hobby}")
+
+
+saludar(nombre ="Ana", hobby="nadar", pueblo="Gernika")
+```
+
+    Hola Ana de Gernika. Entiendo que tu hobby es nadar
+
+- **Argumentos con valores por defecto o predeterminados** que permite
+  llamar a la función sin el argumento predeterminado.
+
+``` python
+def saludar(nombre, pueblo, hobby="programar"):
+    print(f"Hola {nombre} de {pueblo}. Entiendo que tu hobby es {hobby}")
+
+
+saludar(nombre ="Ana",  pueblo="Gernika")
+```
+
+    Hola Ana de Gernika. Entiendo que tu hobby es programar
+
+- **Argumentos variables usando \*args** cuando se puede pasar un número
+  arbitrario de argumentos y puede ser diferentes en cada llamada. Por
+  convención se usa \*args pero puede ser cualquiera nombre como en el
+  siguiente ejemplo de peso de peces.
+
+``` python
+def total_peso(*peces):
+    total = sum(peces)
+    print("El peso total de los peces es:", total, "kg")
+
+
+total_peso(1.5,2,3)
+```
+
+    El peso total de los peces es: 6.5 kg
+
+- **Argumentos variables con nombre usando \*\*kwargs** cuando se puede
+  pasar un número arbitrario de argumentos con nombre.
+
+``` python
+def reporta_ejercicios(**kwargs):
+    for ejercicio, medida in kwargs.items():
+      print(f"Actividad: {ejercicio}, Logro: {medida}")
+
+
+reporta_ejercicios(nadar="1.5 km", correr = "3 veces al dia", saltar = "10 metros")
+print("--------------------------")
+reporta_ejercicios(bicicleta="20 km", saltar = "30 metros")
+```
+
+    Actividad: nadar, Logro: 1.5 km
+    Actividad: correr, Logro: 3 veces al dia
+    Actividad: saltar, Logro: 10 metros
+    --------------------------
+    Actividad: bicicleta, Logro: 20 km
+    Actividad: saltar, Logro: 30 metros
+
+Referencias:
+
+<https://www.w3schools.com/python/gloss_python_function_arguments.asp>
+
+<https://www.w3schools.com/python/gloss_python_function_arbitrary_arguments.asp>
+
 ## ¿Qué es una función Lambda en Python?
 
 ## ¿Qué es un paquete pip?
