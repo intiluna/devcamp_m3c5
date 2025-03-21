@@ -1,0 +1,83 @@
+# Cuestionario Checkpoint 5
+Inti Luna
+2025-03-21
+
+## ¿Qué es un condicional?
+
+Una condición es una pregunta sobre una o varias variables, objetos o
+estado del sistema o del código. Y una condicional en python es la
+evaluación de la condición (o condiciones) y en dependencia de si esta
+se cumple se ejecuta un código u otro. Las condiciones logicas son
+usadas en python y para ello se usan operadores de comparación. Los
+comparadores permiten comparar distintos valores y el resultado es valor
+de verdadero o falso (boolean).
+
+Si la expresión de evaluación se cumple, se ejecuta el código después de
+“if” (si) y es común pero no es necesario siempre tener una alternativa
+de código a ejecutar cuando no se cumple la condición (“else”). En
+simples palabras seria: si se cumple la condición, ejecuta esto y si no
+se cumple ejecuta este otro código alternativo.
+
+Vamos a ver con unos ejemplos para que se entienda mejor.
+
+Ejemplo 1. Condicionales Imagina que la policia evalua si podemos
+conducir en una región que tiene una regulación donde dice que la edad
+mínima es de 19 años.
+
+Pregunta: ¿Es la edad mayor de 19 años? Operador a usar: Mayor que que
+en python es “\>”
+
+``` python
+edad = 20
+print(edad)
+
+if edad > 19:
+  print("Puede conducir en esta región")
+else:
+  print("No puede conducir en esta región")
+```
+
+    20
+    Puede conducir en esta región
+
+Ejemplo 2. Condicionales
+
+Imagina una tienda de zapatos quiere aplicar diferentes descuentos según
+el precio del zapato.
+
+En este caso se evaluan dos condiciones y se tiene alternativa para
+otros casos: - Pregunta 1: ¿Es el precio es menor a 50?, aplicando un
+descuento del 20%. - Pregunta 2: ¿Es el precio es menor a 100 (pero
+mayor o igual a 50)?, aplicando un descuento del 10%. - En todos los
+otros casos (precio igual o mayor a 100), aplicando un descuento del 5%.
+
+``` python
+precios_zapatos = [30,60,100]
+
+for precio in precios_zapatos:
+  if precio < 50:
+    descuento = 20
+    print("Zapato económico: ¡tienes un 20% de descuento!")
+  elif precio < 100:
+      descuento = 10
+      print("Zapato de precio medio: te damos un 10% de descuento.")
+  else:
+      descuento = 5
+      print("Zapato premium: aplica un 5% de descuento.")
+```
+
+    Zapato económico: ¡tienes un 20% de descuento!
+    Zapato de precio medio: te damos un 10% de descuento.
+    Zapato premium: aplica un 5% de descuento.
+
+Referencias <https://www.w3schools.com/python/python_conditions.asp>.
+
+## ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+
+## ¿Qué es una lista por comprensión en Python?
+
+## ¿Qué es un argumento en Python?
+
+## ¿Qué es una función Lambda en Python?
+
+## ¿Qué es un paquete pip?

@@ -2,7 +2,7 @@
 title: "Cuestionario Checkpoint 5"
 author: "Inti Luna"
 date: 2025-03-21
-format: html
+format: gfm
 editor: visual
 ---
 
