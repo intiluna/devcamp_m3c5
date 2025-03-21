@@ -2,7 +2,7 @@
 Inti Luna
 2025-03-21
 
-## ¿Qué es un condicional?
+## 1. ¿Qué es un condicional?
 
 Una condición es una pregunta sobre una o varias variables, objetos o
 estado del sistema o del código. Y una condicional en python es la
@@ -76,7 +76,7 @@ for precio in precios_zapatos:
 
 Referencias <https://www.w3schools.com/python/python_conditions.asp>.
 
-## ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+## 2. ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
 
 En python existen dos tipos de bucles:
 
@@ -143,7 +143,7 @@ Referencias
 
 <https://realpython.com/python-while-loop/>
 
-## ¿Qué es una lista por comprensión en Python?
+## 3. ¿Qué es una lista por comprensión en Python?
 
 Es una manera más compacta de escribir el código que podria estar en for
 loop normal. Pueden hacer que el código sea mas simple de leer y
@@ -217,7 +217,7 @@ y pueden causar confusión.
 Referencias:
 <https://realpython.com/videos/writing-your-first-list-comprehension/>
 
-## ¿Qué es un argumento en Python?
+## 4. ¿Qué es un argumento en Python?
 
 Las funciones pueden tener datos o valores que les son suministrados
 llamados argumentos, se colocan dentro del parentesis y la función los
@@ -307,6 +307,75 @@ Referencias:
 
 <https://www.w3schools.com/python/gloss_python_function_arbitrary_arguments.asp>
 
-## ¿Qué es una función Lambda en Python?
+## 5. ¿Qué es una función Lambda en Python?
 
-## ¿Qué es un paquete pip?
+Es una función anónima que puede tener varios argumentos pero solo una
+expresión. La sintaxis básica usa la palabra reservada “lambda” seguido
+de argumentos y expresión:
+
+    lambda argumentos: expresión
+
+La sintaxis no permite usar statements como en función convencional tipo
+return, pass, assert o raise.
+
+Por ejemplo:
+
+    def identity(x):
+      return x
+
+Seria lo mismo en lambda que:
+
+    lambda x: x
+
+Aqui algunos ejemplos simples:
+
+``` python
+# ejemplo lambda 1
+nombre_estudiante = lambda first, last: f'Full name: {first.title()} {last.title()}'
+nombre_estudiante('inti', 'luna')
+
+# ejemplo lambda 2
+suma = lambda x, y: x + y
+print(suma(3, 4))  
+```
+
+    7
+
+Se recomienda usar funciones lambda para:
+
+- Funciones simples y cortas: Cuando la función realiza una operación
+  sencilla que se puede expresar en una sola línea.
+- Funciones de un solo uso: Al pasar funciones como argumentos a otras
+  funciones, por ejemplo en map(), filter() o sorted().
+
+``` python
+# ejemplo lambda 3
+multiplicar_por_dos = lambda x: x * 2
+print(multiplicar_por_dos(5))  
+
+# ejemplo lambda 4
+n = lambda x: "Positive" if x > 0 else "Negative" 
+print(n(5))   
+print(n(-3))  
+
+# ejemplo lambda 5
+
+texto = "hola a todos"
+mi_lambda = lambda x: x.upper()
+print(mi_lambda(texto))
+```
+
+    10
+    Positive
+    Negative
+    HOLA A TODOS
+
+Referencias
+
+<https://www.w3schools.com/python/python_lambda.asp>
+
+<https://realpython.com/python-lambda/>
+
+<https://www.geeksforgeeks.org/python-lambda-anonymous-functions-filter-map-reduce/>
+
+## 6. ¿Qué es un paquete pip?
