@@ -125,14 +125,68 @@ Referencias
 
 ## ¿Qué es una lista por comprensión en Python?
 
+Es una manera más compacta de escribir el código que podria estar en for loop normal. Pueden hacer que el código sea mas simple de leer y mantener pero tambien pueden hacerlo mas complicado.
 
+Estructura general de lista de comprensión (sin y con condición):
+
+Sin condición:
+    (valores) = [(expresion) for (valor) in (coleccion)]
+Con condición:
+    (valores) = [(expresion) for (valor) in (coleccion) condition]
+
+Y el equivalente for loop:
+
+Sin condición:
+    (valores) = []
+    for (valor) in (coleccion):
+        (valores).append( (expresion) )
+Con condición:
+    (valores) = []
+    for (valor) in (coleccion):
+        if (condicion):
+          (valores).append(expresion)
+          
+Ahora vamos a ver un ejemplo donde sumamos 1 a cada valor:
+
+```{python}
+suma_uno = [x + 1 for x in range(5)]
+print(f"antes de aplicar:{list(range(5))}")
+print(f"despues:{suma_uno}")
+
+suma_uno_normal =[]
+for x in range(5):
+  x_nuevo = x + 1
+  suma_uno_normal.append(x_nuevo)
+
+print(f"resultado usando for-loop normal:{suma_uno_normal}")
+```
+
+Otro ejemplo de filtrar:
 
 ```{python}
 
+valores = [10,15,5,6,89,34]
+umbral = 20
+valores_filtrados = [x for x in valores if x > umbral]
+print(f"valores iniciales:{valores}")
+print(f"despues de filtrar:{valores_filtrados}")
 
+valores_filtrados_normal =[]
+for x in valores:
+  if x > umbral:
+    valores_filtrados_normal.append(x)
+
+print(f"resultado usando for-loop normal:{valores_filtrados_normal}")
 ```
 
+Si la lista de comprensión se hace muy larga, se propone usar un formato que facilite la lectura como el que se muestra donde se separa en varias lineas:
 
+![Formato propuesto para list comprehension](images/format_list_comprehension.png)
+
+Por último, hay que tener en cuenta que el código va a ser revisado por otros desarrolladores y si la list comprehension no es familiar para ellos hay que evitarlas. Adicionalmente, Si hay nested for loops, no se recomienda hacer nested list comprehension, ya que dificulta la lectura y pueden causar confusión.
+
+Referencias:
+<https://realpython.com/videos/writing-your-first-list-comprehension/>
 
 ## ¿Qué es un argumento en Python?
 
