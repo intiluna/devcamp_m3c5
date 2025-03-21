@@ -206,7 +206,7 @@ que facilite la lectura como el que se muestra donde se separa en varias
 lineas:
 
 ![Formato propuesto para list
-comprehension](images/format_list_comprehension.png)
+comprehension](cuestionario/images/format_list_comprehension.png)
 
 Por último, hay que tener en cuenta que el código va a ser revisado por
 otros desarrolladores y si la list comprehension no es familiar para
@@ -397,4 +397,4 @@ podemos explorar en <https://pypi.org>.
 Por ejemplo, si buscamos numpy obtenemos un resultado como lo que se
 muestra en la siguiente figura:
 
-![Vista de resultado de paquete numpy en pypi](images/pip_packages.png)
+![Vista de resultado de paquete numpy en pypi](cuestionario/images/pip_packages.png)
