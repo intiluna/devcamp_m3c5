@@ -40,6 +40,7 @@ Ejemplo 2. Condicionales
 Imagina una tienda de zapatos quiere aplicar diferentes descuentos según el precio del zapato.
 
 En este caso se evaluan dos condiciones y se tiene alternativa para otros casos:
+
 - Pregunta 1: ¿Es el precio es menor a 50?, aplicando un descuento del 20%.
 - Pregunta 2: ¿Es el precio es menor a 100 (pero mayor o igual a 50)?, aplicando un descuento del 10%.
 - En todos los otros casos (precio igual o mayor a 100), aplicando un descuento del 5%.
@@ -68,14 +69,59 @@ Referencias <https://www.w3schools.com/python/python_conditions.asp>.
 
 ## ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
 
+En python existen dos tipos de bucles: 
 
+For loops se usan cuando sabemos de antemano cuantas veces vamos a correr el código en base a un número de veces o cantidad de elementos a usar en una secuencia.
+
+While loops se usa cuando no sabemos cuantas veces se requiere correr de antemano el código, cuando se mantenga una condición u ocurra un evento.
+
+En otro lenguajes existe un tercero que es Do-While, es muy similar a while loop pero asegura que el código se ejecuta al menos una vez.
+
+Vamos a ver algunos ejemplos para entender mejor.
+
+Ejemplo Bucles-1:
+Para elementos en una lista de valores de contaminación hacemos un bucle donde se ejecuta una vez por cada elemento de la lista y en dependencia de valor se imprime si el valor es alto o normal.
 
 ```{python}
 
+niveles_contaminacion = [40, 55, 70, 30, 90]
+valor_referencia = 50
+
+for nivel in niveles_contaminacion:
+    if nivel > valor_referencia:
+        print("Nivel alto:", nivel)
+    else:
+        print("Nivel normal:", nivel)
+
+
+```
+
+Ejemplo Bucles-2
+
+Para casos en que no sabemos el número de ejecuciones y depende de una condición. En este caso, la condición es que mientras el tiempo sea mayor que 0, vamos a ejecutar el código.
+
+```{python}
+
+tiempo_carga = 5
+
+while tiempo_carga > 0:
+    print("Cargando... Faltan:", tiempo_carga, "segundos")
+    tiempo_carga -= 1
+
+print("Web cargada")
 
 
 
 ```
+
+
+Referencias 
+
+<https://medium.com/@heyamit10/for-loop-vs-while-loop-a-comprehensive-guide-for-data-scientists-163b0c11eea0>
+
+<https://realpython.com/python-while-loop/>
+
+
 
 ## ¿Qué es una lista por comprensión en Python?
 
