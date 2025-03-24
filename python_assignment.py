@@ -32,9 +32,26 @@ print(f"Resultado usando función lambda: {mi_lambda(n1,n2,n3)}")
 print("-" * 50)
 
 
-#Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista.
+#4. Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista.
 # *Sugerencia, si es necesario, utilice un bucle for in y el operador in.
 
 nombre = 'Enrique'
 
 lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
+
+print("Usando in sin bucle")
+if nombre in lista_nombre:
+    print(f"El nombre {nombre} esta en la lista")
+else:
+    print(f"El nombre {nombre} no esta en la lista")
+
+print("- - -" * 10)
+print("Usando in con bucle")
+
+for nombre_x in lista_nombre:
+    print(nombre_x)
+    if nombre_x == nombre:
+        print("Tenemos a nuestro nombre target en la lista")
+    else:
+        print("no match")
+    
